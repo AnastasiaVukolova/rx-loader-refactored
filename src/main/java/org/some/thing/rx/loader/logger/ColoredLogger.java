@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ColoredLogger {
     // Reset
-    public static final String RESET = "\033";  // Text Reset
+    public static final String RESET = "";  // Text Reset
 
     // Regular Colors
     public static final String BLACK = "\033[0;30m";   // BLACK

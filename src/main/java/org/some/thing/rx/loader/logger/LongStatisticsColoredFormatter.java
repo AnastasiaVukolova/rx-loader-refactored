@@ -24,15 +24,15 @@ public class LongStatisticsColoredFormatter {
     public static String header_notColored() {
         return String.format(
                 "%s%-" + FIELD_WIDTH + "s%s%-" + FIELD_WIDTH + "s%s%-" + FIELD_WIDTH + "s%s%-" + FIELD_WIDTH + "s%s%-" + FIELD_WIDTH + "s%s",
-                "\033",
+                ColoredLogger.RESET,
                 "Event name",
-                "\033",
+                ColoredLogger.RESET,
                 "min(ms)",
-                "\033",
+                ColoredLogger.RESET,
                 "max(ms)",
-                "\033",
+                ColoredLogger.RESET,
                 "avg(ms)",
-                "\033",
+                ColoredLogger.RESET,
                 "stdev(ms)",
                 ColoredLogger.RESET
         );
@@ -58,15 +58,15 @@ public class LongStatisticsColoredFormatter {
     public static String toString_notColored(String eventName, LongStatistics statistics) {
         return String.format(
                 "%s%-" + FIELD_WIDTH + "s%s%-" + FIELD_WIDTH + "d%s%-" + FIELD_WIDTH + "d%s%-" + FIELD_WIDTH + "s%s%-" + FIELD_WIDTH + "s%s",
-                "\033",
+                ColoredLogger.RESET,
                 eventName,
-                "\033",
+                ColoredLogger.RESET,
                 statistics.getMin() == Long.MAX_VALUE ? 0 : statistics.getMin(),
-                "\033",
+                ColoredLogger.RESET,
                 statistics.getMax() == Long.MIN_VALUE ? 0 : statistics.getMax(),
-                "\033",
+                ColoredLogger.RESET,
                 String.format("%.2f", statistics.getAverage()),
-                "\033",
+                ColoredLogger.RESET,
                 String.format("%.2f", statistics.getStandardDeviation()),
                 ColoredLogger.RESET
         );
