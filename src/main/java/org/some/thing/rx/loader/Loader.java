@@ -48,9 +48,8 @@ public class Loader {
 
         if (requestCount == Integer.MAX_VALUE)
             timingEventObservable = timingEventObservable.takeUntil(Observable.timer(duration.getSeconds(), TimeUnit.SECONDS));
-            ColoredLogger.logNotColored(ColoredLogger.GREEN_BOLD, String.format("Running %ds test @ %s\n %d threads and %d connections",
+            ColoredLogger.logNotColored(ColoredLogger.GREEN_BOLD, String.format("Running %ds test %d threads and %d connections",
                     duration.getSeconds(),
-                    address,
                     threads,
                     connections
             ));
